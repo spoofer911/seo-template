@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #006ba8;
+  --second-color: #e0b322;
+  --dark: #000066;
+  --white: #ffffff;
+  --bgcolor: #000000;
+  --primary-font: "Roboto", sans-serif;
+  --second-font: "Libre Baskerville", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--primary-font);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.swap-back-primary {
+  background-color: var(--primary-color);
+}
+.swap-back-white {
+  background-color: var(--white);
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  fill: var(--white);
+}
+.large-icon {
+  height: 40px;
+  width: 40px;
+  fill: var(--white);
+}
+.btn {
+  cursor: pointer;
+}
+.icon-btn {
+  cursor: pointer;
+  border-radius: 50%;
+  width: fit-content;
+  padding: 8px;
+  background-color: inherit;
+}
+.icon-btn:hover .icon,
+.icon-btn:hover .large-icon {
+  fill: var(--second-color);
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.go-top-btn {
+  background-color: var(--second-color);
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+.go-top-icon {
+  transform: rotate(90deg);
+}
+.make-flex {
+  display: flex;
+}
+header,
+footer {
+  font-size: 1.1em;
+  flex-direction: row;
+  color: var(--white);
+}
+.header-company-logo .container {
+  margin: 2em 3em;
+}
+.navbar {
+  align-items: center;
+  background-color: var(--bgcolor);
+  border-top: 3px solid var(--primary-color);
+  flex: 1 1 auto;
+}
+nav {
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0 1.5em;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.header-navigations {
+  gap: 1em;
+}
+.hover-underline {
+  display: inline-block;
+  position: relative;
+}
+.hover-underline:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.hover-underline:hover {
+  color: var(--second-color);
+}
+.hover-underline:hover:after {
+  width: 100%;
+  left: 0;
+  color: var(--second-color);
+}
+.hover-dropdown {
+  cursor: pointer;
+}
+.header-contact {
+  border: 3px solid var(--primary-color);
+  gap: 2px;
+}
+.header-contact a {
+  height: 100%;
+}
+.header-contact-item {
+  height: 100%;
+  padding: 0 1em;
+}
+.header-contact-item:hover {
+  color: var(--second-color);
+}
+.header-contact-item:hover svg {
+  fill: var(--second-color);
+}
+
+/* To Hide the display, keep it at last before media queries*/
+.hidden {
+  display: none;
+}
